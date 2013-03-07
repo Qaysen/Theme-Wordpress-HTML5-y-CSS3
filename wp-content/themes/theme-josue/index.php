@@ -2,20 +2,22 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<!--[if gt IE 8]><!--> 
+<html lang="es" class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="<?php bloginfo('charset'); ?>">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php bloginfo('name'); ?></title>
-        <meta name="description" content="<?php bloginfo('description') ?>">
+        <title><?php bloginfo( 'name' ); ?></title>
+        <meta name="description" content="<?php bloginfo( 'description' ) ?> ">
         <meta name="viewport" content="width=device-width">
 
+        <link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/css/normalize.min.css">
+        <link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/css/main.css">
+        <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ) ?>">
 
-        <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/normalize.min.css">        
-        <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/main.css">
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
+        <script src="<?php bloginfo( 'template_url' ) ?>/js/vendor/modernizr-2.6.2.min.js"></script>
 
-        <script src="<?php bloginfo('template_url') ?>/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -23,6 +25,13 @@
         <![endif]-->
 
         <header>
+            <div class="logo"></div>
+            <h1>Orlandoo</h1>
+
+        </header>
+         <section class ="slider">
+            </section>
+
             <nav>
                 <ul>
                     <li><a href="">Inicio</a></li>
@@ -32,21 +41,18 @@
                 </ul>
             </nav>
 
-            <section class ="slider">
+           
+            
+            <section class="noticias">
+            <h2 class="titulo-noticias">Articulos</h2>
+            <?php while (have_posts()) : the_post(); ?>
+            <article class="articulo">
+                <h3 class="titulo-articulo"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                <div class="contenido-articulo"><?php the_content() ?></div>
+            </article>
+            <?php endwhile; ?>
             </section>
-            <section class="noticias">                
-                <?php while(have_posts()):the_post();?>
-                    <article class="articulo">
-                        <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-                        <?php the_content() ?>
-                        <?php the_date() ?>
-                        <?php the_time() ?>
-                        <?php the_author() ?>
-                        <?php the_category() ?>
-                        <?php the_tags() ?>                       
-                    </article>
-                <?php endwhile;?>                
-            </section>
+
             <section class ="bienvenida" > 
                 <div class="parrafo1">   
                     <h1><b>BIENVENIDOS A OSTERLING ABOGADOS</b></h1><br/><br/>
@@ -83,14 +89,14 @@
             </section>
           <!-- <aside class="sidebar">
                 <?php wp_list_categories(); ?>
-            </aside>   -->
-        </header>    
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+            </aside>   -->          
+        <footer>Qaysen</footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
         <script src="<?php bloginfo('template_url') ?>/js/main.js"></script>
+
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
