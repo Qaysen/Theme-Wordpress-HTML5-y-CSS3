@@ -14,12 +14,9 @@
         </title>
         <meta name="description" content="<?php bloginfo('description');?>">
         <meta name="viewport" content="width=device-width">
-
-        
-
         <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/normalize.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/main.css">
-         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
         <script src="<?php bloginfo('template_url')?>/js/vendor/modernizr-2.6.2.min.js"></script>
 
     </head>
@@ -45,30 +42,27 @@
         	</ul>
         </nav>	
 
-        <section class="noticias">
+         <section class="noticias">
+            <h2 class="titulo-noticias">Articulos</h2>
+            <?php while (have_posts()) : the_post(); ?>
+                <article class="articulo">
+                <h3 class="titulo-articulo"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                <div class="contenido-articulo"><?php the_content() ?></div>
+                </article>
+            <?php endwhile; ?>
+        </section>
 
-        	<?php while (have_posts()):the_post();?>
-        		<article class="articulo">
-        			
-        			<h3><a href="<?php the_permalink()?>"><?php the_title()?></a></h3>
-        			<?php the_content()?>
-        			<?php the_time()?>
-        			<?php the_date()?>
-        			<?php the_author()?>
-        			<?php the_category()?>
-        			<?php the_tags()?>
-        			<?php the_permalink()?>
-        		</article>	
-        		
-    		<?php endwhile; ?>
-    	</section>
-    	<section class="bienvenida">Bienvenida</section>
+        <section class="bienvenida">
+        Hola me llamo Josue.
+        </section>
+
         <!--<aside class="sidebar">
-        	<?php wp_list_categories();?>
+        <?php wp_list_categories(); ?>
         </aside>-->
+
         <footer>
-        	Diseñado por Qaysen
-        </footer>	
+        Diseñada por Qaysen.
+        </footer>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
