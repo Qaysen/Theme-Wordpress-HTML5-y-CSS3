@@ -22,7 +22,7 @@ define('DB_NAME', 'Basecrear');
 define('DB_USER', 'root');
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', 'melquiades');
+define('DB_PASSWORD', '123456');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
 define('DB_HOST', 'localhost');
