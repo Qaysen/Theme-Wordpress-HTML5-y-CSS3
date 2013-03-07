@@ -18,9 +18,14 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/normalize.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/main.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/coin-slider-styles.css">
+
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
         <script src="<?php bloginfo('template_url')?>/js/vendor/modernizr-2.6.2.min.js"></script>
 
+        <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -29,12 +34,33 @@
 
         <header>
 
-        	<div class="logo"></div>
-        	<h1>Elicia Cordova Lazaro</h1>
-        </header>
-        <section class="slider">
+        	<div class="logo">
+                <a href="index.php">
+                    <hgroup>  
+                    <h1>José Nuñez Barbosa</h1>
+                    <h4>A B O G A D O S</h4>
+                </hgroup>
+                </a>
 
-        </section>
+            </div>
+            <section id="slider" >
+        
+                <a >
+                    <img src="<?php bloginfo('template_url')?>/img/dibujo.png" >
+                </a>
+                
+                <a >
+                    <img src="<?php bloginfo('template_url')?>/img/dibujo2.png" >
+                 </a>
+                
+                <a>
+                   <img src="<?php bloginfo('template_url')?>/img/dibujo.png" >
+                </a>
+            
+            </section>
+        	
+        </header>
+
         <nav>
         	<ul>
         		<li><a href="">Inicio</a></li>
@@ -58,12 +84,12 @@
 
             <section class ="bienvenida" > 
                 <div class="parrafo1">   
-                    <h1><b>BIENVENIDOS A OSTERLING ABOGADOS</b></h1><br/><br/>
+                    <div class="titulos"><b>BIENVENIDOS A OSTERLING ABOGADOS</b></div><br/><br/>
                     <div align="justify">
                         <strong>Osterling Abogados </strong>
                         es una prestigiosa firma de asesoría jurídica con una larga trayectoria
-                        en el país,que nace de la excelencia profesional de nuestra <a href="">práctica</a> 
-                        y el compromiso total con cada uno de nuestros <a href="">clientes</a>.<br /><br />
+                        en el país,que nace de la excelencia profesional de nuestra prácticas
+                        y el compromiso total con cada uno de nuestros clientes.<br><br>
                         Más de tres décadas de experiencia nos han convertido en uno de los estudios
                         más destacados del país.  
                     </div>
@@ -74,14 +100,14 @@
                 <div class="parrafo2">
                     <div class="parrafo21">
                         <div align="justify">
-                            <h1><b>PROBONO</b></h1><br/><br/>
-                            Osterling Abogados es miembro adherente a la Declaración<a href="">Pro-Bono</a>
+                            <div class="titulos"><b>PROBONO</b></div><br/><br/>
+                            Osterling Abogados es miembro adherente a la Declaración Pro-Bono
                             de las Américas. Con esta justa causa buscamos contribuir con el desarrollo
                             económico, social y cultural de nuestro país y bajo esta Declaración, nos
                             comprometemos a brindar un trabajo mínimo de 20 horas al año, por abogado.                        
                         </div>
                         <div align="right">
-                            <a href="">Ver más &gt;</a>
+                            <a href="" class="links">Ver más &gt;</a>
                         </div>
                     </div>                   
                     <div align="right">
@@ -99,6 +125,8 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+        <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/coin-slider.js"></script>
+
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
         <script src="<?php bloginfo('template_url') ?>/js/main.js"></script>
@@ -109,6 +137,9 @@
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+        <script>
+            $('#slider').coinslider({ width: 1100, navigation: false, delay: 500, height: 400 });
         </script>
     </body>
 </html>
