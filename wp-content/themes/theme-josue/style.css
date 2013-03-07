@@ -1,0 +1,43 @@
+/*
+Theme Name: Theme Josue;
+*/
+body {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+nav ul li {
+	display: inline-block;
+}
+article {
+	margin: 20px 0;
+	overflow: hidden;
+}
+.titulo-noticias {
+	font-size: 16px;
+	color: #699a3b;
+}
+h3.titulo-articulo {
+	font-size: 14px;
+	margin: 0;
+	background: url(img/bullet.gif) no-repeat 0px 3px;
+	padding: 0 0 0 15px;
+}
+.titulo-articulo a {
+	text-decoration: none;
+	color: #4e4e4e;
+}
+.contenido-articulo p{
+	color: #c6c6c6;
+	margin: 0;
+	padding: 0 0 0 15px;
+}
+.noticias, .sidebar, .bienvenida {
+	display: inline-block;
+	vertical-align: top;
+}
+.noticias {
+	max-width: 311px;
+}
+.sidebar {
+	max-width: 300px;
+}
