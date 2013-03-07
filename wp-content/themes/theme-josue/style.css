@@ -1,19 +1,24 @@
 
 
-body {
-	max-width: 1100px;
-	margin: 0 auto;
+/*Theme Name:Theme Josue;
+*/
+body
+{
+	max-width:1100px;
+	margin: 0 auto; 
+
 }
 nav  {
 	
-	display: block;
-	width: 100%;
+	display: block;	
+	margin: 0 auto;
 
 }
 
 nav ul {
 	text-align: center;
 	color: white;
+	padding:0;
 }
 
 nav li {
@@ -28,8 +33,8 @@ nav li {
 	background: -ms-linear-gradient(top,  rgba(206,206,206,1) 0%,rgba(252,252,252,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(206,206,206,1) 0%,rgba(252,252,252,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cecece', endColorstr='#fcfcfc',GradientType=0 ); /* IE6-9 */
-	width: 140px;
-	height: 40px;
+	width: 100px;
+	height: 30px;
 }
 
 nav a {
@@ -42,10 +47,7 @@ nav ul li:hover a
 {
 color: #000;
 }
-nav ul li:active a
-{
-color: #100;
-}
+
 nav ul li:hover
 {
 
@@ -59,10 +61,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#699a3b', end
 
 }
 
+
 article {
 	margin: 20px 0;
 	overflow: hidden;
 }
+
 .titulo-noticias {
 	font-size: 16px;
 	color: #699a3b;
@@ -82,7 +86,7 @@ h3.titulo-articulo {
 	margin: 0;
 	padding: 0 0 0 15px;
 }
-.noticias, .sidebar, .bienvenida {
+.noticias, .bienvenida {
 	display: inline-block;
 	vertical-align: top;
 }
@@ -91,4 +95,26 @@ h3.titulo-articulo {
 }
 .sidebar {
 	max-width: 300px;
+
 }
+.bienvenida
+{
+	max-width: 600px;
+	background-color:#fff;	
+	
+}
+.parrafo1
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+.parrafo21
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+h1{
+	color:#556B2F;
+	font-size:12px;
+}
+

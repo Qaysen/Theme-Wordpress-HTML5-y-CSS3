@@ -3,7 +3,9 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<!--[if gt IE 8]><!--> 
+<html lang="es" class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -43,6 +45,7 @@
         </nav>	
 
          <section class="noticias">
+
             <h2 class="titulo-noticias">Articulos</h2>
             <?php while (have_posts()) : the_post(); ?>
                 <article class="articulo">
@@ -50,25 +53,55 @@
                 <div class="contenido-articulo"><?php the_content() ?></div>
                 </article>
             <?php endwhile; ?>
-        </section>
 
-        <section class="bienvenida">
-        Hola me llamo Josue.
-        </section>
+            </section>
 
-        <!--<aside class="sidebar">
-        <?php wp_list_categories(); ?>
-        </aside>-->
+            <section class ="bienvenida" > 
+                <div class="parrafo1">   
+                    <h1><b>BIENVENIDOS A OSTERLING ABOGADOS</b></h1><br/><br/>
+                    <div align="justify">
+                        <strong>Osterling Abogados </strong>
+                        es una prestigiosa firma de asesoría jurídica con una larga trayectoria
+                        en el país,que nace de la excelencia profesional de nuestra <a href="">práctica</a> 
+                        y el compromiso total con cada uno de nuestros <a href="">clientes</a>.<br /><br />
+                        Más de tres décadas de experiencia nos han convertido en uno de los estudios
+                        más destacados del país.  
+                    </div>
+                    <div class="trabaja" align="right">
+                    <a href=""><img src="" width="200" height="22" border="0" alt="TRABAJA CON NOSOTROS"/></a>
+                    </div>                                               
+                </div>                 
+                <div class="parrafo2">
+                    <div class="parrafo21">
+                        <div align="justify">
+                            <h1><b>PROBONO</b></h1><br/><br/>
+                            Osterling Abogados es miembro adherente a la Declaración<a href="">Pro-Bono</a>
+                            de las Américas. Con esta justa causa buscamos contribuir con el desarrollo
+                            económico, social y cultural de nuestro país y bajo esta Declaración, nos
+                            comprometemos a brindar un trabajo mínimo de 20 horas al año, por abogado.                        
+                        </div>
+                        <div align="right">
+                            <a href="">Ver más &gt;</a>
+                        </div>
+                    </div>                   
+                    <div align="right">
+                        <img src="<?php bloginfo('template_url')?>/img/i1.jpg" name="" width="87" height="134" border="0" />                       
+                        <img src="<?php bloginfo('template_url')?>/img/i2.jpg" name="" width="87" height="134" border="0" />                        
+                    </div>                                
+                </div>
+            </section>
+          <!-- <aside class="sidebar">
+                <?php wp_list_categories(); ?>
+            </aside>   -->          
+        <footer>Qaysen</footer>
 
-        <footer>
-        Diseñada por Qaysen.
-        </footer>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url')?>/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
-        <script src="<?php bloginfo('template_url')?>/js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="<?php bloginfo('template_url') ?>/js/main.js"></script>
 
 
         <script>
